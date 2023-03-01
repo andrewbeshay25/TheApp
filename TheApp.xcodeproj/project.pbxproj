@@ -162,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				492EB23E28B8FED200198567 /* SuperHomeView.swift */,
+				492EB24028B8FEDC00198567 /* SuperContentView.swift */,
 			);
 			path = "Super Views";
 			sourceTree = "<group>";
@@ -225,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				492EB24228B8FEE100198567 /* Super Views */,
-				492EB24028B8FEDC00198567 /* SuperContentView.swift */,
 				49DEC5E328B459C4007CD8F6 /* TheApp */,
 				49DEC5F428B459C5007CD8F6 /* TheAppTests */,
 				49DEC5FE28B459C5007CD8F6 /* TheAppUITests */,
