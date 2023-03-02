@@ -13,7 +13,7 @@ struct SuperHomeView: View {
     @State private var closeOffset = CGFloat.zero
     @State private var openOffset = CGFloat.zero
     @State var isShowingSomething: Bool = false
-    
+
     @State var isOpen = false
     
     var button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)

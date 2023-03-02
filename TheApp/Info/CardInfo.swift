@@ -54,6 +54,14 @@ var extras = [
     Extras(title: "Baptismal Requests",
            color: Color("InverseAccentColor")
            //image:
+            ),
+    Extras(title: "YouTube Channel",
+           color: Color("InverseAccentColor")
+             //image: Sermon archive
+            ),
+    Extras(title: "FaceBook Page",
+           color: Color("InverseAccentColor")
+             //image: Sermon archive
             )
 ]
 

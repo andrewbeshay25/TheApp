@@ -38,7 +38,7 @@ struct ContentView: View {
                 .offset(y: !Side ? -24 : 300)///////////////////////////////////////////////////////////////redo
             
                 .background(
-                    LinearGradient(colors: [Color("Background").opacity(0),         Color("Background")], startPoint: .top, endPoint: .bottom)
+                    LinearGradient(colors: [Color("Background").opacity(0), Color("Background")], startPoint: .top, endPoint: .bottom)
                         .frame(height: 70)
                         .frame(maxHeight: .infinity, alignment: .bottom)
                         .allowsHitTesting(false)

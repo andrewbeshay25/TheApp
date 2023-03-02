@@ -57,7 +57,7 @@ struct HymnsView: View {
                                             Text("Pre-K & KG\n Grade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                         }
                                         .padding(.leading, 125)
@@ -67,20 +67,18 @@ struct HymnsView: View {
                                             Text("1st & 2nd Grade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                         }
-                                        
                                         
                                     }
                                     .ignoresSafeArea()
                                     
                                 }
                                 Text("Mixed:")
-                                    .bold()
                                     .font(.title)
                                     .foregroundColor(Color("Golden"))
-                                    .padding(.leading, 50)
+                                    .padding(.leading, 60)
                                     .frame(maxWidth: 150, alignment: .leading)
                                 
                                     .background(
@@ -105,7 +103,7 @@ struct HymnsView: View {
                                             Text("3rd & 4th\nGrade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                         }
                                         .padding(.leading, 125)
@@ -116,7 +114,7 @@ struct HymnsView: View {
                                             Text("5th & 6th\nGrade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                             
                                         }
@@ -126,20 +124,21 @@ struct HymnsView: View {
                                             Text("7th & 8th\nGrade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                         }
+                                        .padding(.trailing, 25)
+                                        
                                         
                                     }
                                     .ignoresSafeArea()
                                     
                                 }
                                 Text("Boys:")
-                                    .bold()
                                     .font(.title)
                                     .foregroundColor(Color("Golden"))
-                                    .padding(.leading, 25)
-                                    .frame(maxWidth: 100, alignment: .leading)
+                                    .padding(.leading, 35)
+                                    .frame(maxWidth: 101, alignment: .leading)
                                 
                                     .background(
                                         Rectangle()
@@ -163,7 +162,7 @@ struct HymnsView: View {
                                             Text("3rd & 4th\nGrade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                         }
                                         .padding(.leading, 125)
@@ -174,7 +173,7 @@ struct HymnsView: View {
                                             Text("5th & 6th\nGrade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                             
                                         }
@@ -184,19 +183,18 @@ struct HymnsView: View {
                                             Text("7th & 8th\nGrade")
                                                 .foregroundColor(Color("Golden"))
                                                 .padding()
-                                                .frame(width: 150)
+                                                .frame(width: 120)
                                                 .background(Color("InverseAccentColor").cornerRadius(30))
                                         }
-                                        
+                                        .padding(.trailing, 25)
                                     }
                                     .ignoresSafeArea()
                                     
                                 }
                                 Text("Girls:")
-                                    .bold()
                                     .font(.title)
                                     .foregroundColor(Color("Golden"))
-                                    .padding(.leading, 25)
+                                    .padding(.leading, 35)
                                     .frame(maxWidth: 100, alignment: .leading)
                                 
                                     .background(
@@ -217,7 +215,6 @@ struct HymnsView: View {
                     
                     .fullScreenCover(isPresented: $first_secondHymnsShow){
                         ZStack {
-                            
                             First_SecondHymns()
                             
                             Button{
@@ -260,22 +257,19 @@ struct HymnsView: View {
                         }
                         
                     }
-
+                    
                 }
-                
             }
-
             
             if show{
                 CardExpand(namespace: namespace, showing: $show, item: primaries[3])
             }
-            
         }
         .background(Color.accentColor)
         .ignoresSafeArea()
-        
-        
+        .navigationBarBackButtonHidden(true)
     }
+    
 }
 
 struct HymnsView_Previews: PreviewProvider {

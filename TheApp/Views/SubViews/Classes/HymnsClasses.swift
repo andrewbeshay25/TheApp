@@ -14,6 +14,8 @@ struct First_SecondHymns: View {
                 Text("1st & 2nd Grade Hymns Class")
                     .font(.title)
                     .frame(alignment: .top)
+                    .padding(.top, 50)
+
                 Image("ChurchInfo")
                     .resizable()
                     .frame(width: 400, height: 200)
@@ -41,7 +43,7 @@ struct First_SecondHymns: View {
                 Text("Description")
                     .font(.title2)
                     .padding()
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aeneanLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aeneanLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean")
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
                     .padding(20)
 
             }
@@ -63,6 +65,7 @@ struct Third_FourthHymns: View {
                 Text("3rd & 4th Grade Hymns Class")
                     .font(.title)
                     .frame(alignment: .top)
+                    .padding(.top, 50)
                 Image("ChurchInfo")
                     .resizable()
                     .frame(width: 400, height: 200)
@@ -90,7 +93,7 @@ struct Third_FourthHymns: View {
                 Text("Description")
                     .font(.title2)
                     .padding()
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aeneanLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aeneanLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean")
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
                     .padding(20)
 
             }

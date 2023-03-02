@@ -55,12 +55,13 @@ struct CardExpand: View {
             Button{
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)){
                     showing.toggle()
+                    print("pressed")
                 }
             }label: {
                 Image(systemName: "xmark")
                     .font(.body.weight(.bold))
                     .foregroundColor(.secondary)
-                    .padding(8)
+                    .padding(10)
                     .background(.ultraThinMaterial, in: Circle())
                 
             }
@@ -86,7 +87,6 @@ struct CardExpand: View {
                 .aspectRatio(contentMode: .fit)
                 .matchedGeometryEffect(id: "image", in: namespace)
         )
-        
         
         .mask(
             RoundedRectangle(cornerRadius: 30, style: .continuous)
