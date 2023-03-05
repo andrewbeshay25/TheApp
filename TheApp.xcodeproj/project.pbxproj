@@ -179,6 +179,8 @@
 		49524C7128B6EA1100A6D8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				49524D2928B7189E00A6D8F8 /* SmallCardView.swift */,
+				49DEC62E28B6E7C7007CD8F6 /*  BigCardView.swift */,
 				496DCDCD28BA513D0063ABF2 /* CardItem.swift */,
 				496DCDD228BA53010063ABF2 /* CardView.swift */,
 				496DCDD028BA521B0063ABF2 /* CardExpand.swift */,
@@ -216,7 +218,6 @@
 		49DEC5D828B459C4007CD8F6 = {
 			isa = PBXGroup;
 			children = (
-				492EB24228B8FEE100198567 /* Super Views */,
 				49DEC5E328B459C4007CD8F6 /* TheApp */,
 				49DEC5F428B459C5007CD8F6 /* TheAppTests */,
 				49DEC5FE28B459C5007CD8F6 /* TheAppUITests */,
@@ -278,10 +279,9 @@
 		49DEC60E28B459EF007CD8F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				492EB24228B8FEE100198567 /* Super Views */,
 				49DEC5E628B459C4007CD8F6 /* ContentView.swift */,
 				495029AA28B6E87D00FDABBE /* HomeView.swift */,
-				49DEC62E28B6E7C7007CD8F6 /*  BigCardView.swift */,
-				49524D2928B7189E00A6D8F8 /* SmallCardView.swift */,
 				492EB24328BA492200198567 /* SundaySchoolView.swift */,
 				4985055E29AFC91000DD4FD2 /* HymnsView.swift */,
 				49F60A9329038A340095E413 /* Login */,
@@ -304,8 +304,8 @@
 		49F60A9329038A340095E413 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				495029AC28B6E88500FDABBE /* SignInView.swift */,
 				49F60A9429038A520095E413 /* SignupView.swift */,
+				495029AC28B6E88500FDABBE /* SignInView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
