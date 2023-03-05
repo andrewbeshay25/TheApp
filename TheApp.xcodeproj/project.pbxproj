@@ -11,7 +11,6 @@
 		490B198228B8447C00957F00 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B198128B8447C00957F00 /* ImageSlider.swift */; };
 		491C585E29AFA3D8005C1B30 /* HymnsClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C585D29AFA3D8005C1B30 /* HymnsClasses.swift */; };
 		492EB23F28B8FED200198567 /* SuperHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492EB23E28B8FED200198567 /* SuperHomeView.swift */; };
-		492EB24128B8FEDC00198567 /* SuperContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492EB24028B8FEDC00198567 /* SuperContentView.swift */; };
 		492EB24428BA492200198567 /* SundaySchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492EB24328BA492200198567 /* SundaySchoolView.swift */; };
 		495029A928B6E85C00FDABBE /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495029A828B6E85C00FDABBE /* CardInfo.swift */; };
 		495029AB28B6E87D00FDABBE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495029AA28B6E87D00FDABBE /* HomeView.swift */; };
@@ -73,7 +72,6 @@
 		491C585D29AFA3D8005C1B30 /* HymnsClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnsClasses.swift; sourceTree = "<group>"; };
 		49299918298205FF00C82BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		492EB23E28B8FED200198567 /* SuperHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHomeView.swift; sourceTree = "<group>"; };
-		492EB24028B8FEDC00198567 /* SuperContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperContentView.swift; sourceTree = "<group>"; };
 		492EB24328BA492200198567 /* SundaySchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SundaySchoolView.swift; sourceTree = "<group>"; };
 		495029A828B6E85C00FDABBE /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		495029AA28B6E87D00FDABBE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -142,14 +140,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		490B198028B8446A00957F00 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				490B198128B8447C00957F00 /* ImageSlider.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		491C585C29AFA260005C1B30 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				492EB23E28B8FED200198567 /* SuperHomeView.swift */,
-				492EB24028B8FEDC00198567 /* SuperContentView.swift */,
 			);
 			path = "Super Views";
 			sourceTree = "<group>";
@@ -170,6 +159,7 @@
 		495029A628B6E80A00FDABBE /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				49DEC62728B45ED8007CD8F6 /* Fonts */,
 				49524C6D28B6E93400A6D8F8 /* Pre-made Extensions.swift */,
 				4958388B28E5123E00976B0B /* CustomTextField.swift */,
 				4958388D28E5125500976B0B /* CustomButton.swift */,
@@ -180,18 +170,23 @@
 		495029A728B6E83700FDABBE /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				4993BE7B28E1F249006B7C40 /* AboutCardItem.swift */,
 				495029A828B6E85C00FDABBE /* CardInfo.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
 		};
-		49524C7128B6EA1100A6D8F8 /* Navigation */ = {
+		49524C7128B6EA1100A6D8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				496DCDCD28BA513D0063ABF2 /* CardItem.swift */,
+				496DCDD228BA53010063ABF2 /* CardView.swift */,
+				496DCDD028BA521B0063ABF2 /* CardExpand.swift */,
 				49524C7228B6EA3300A6D8F8 /* TabBar.swift */,
 				49524D2728B6FE9900A6D8F8 /* SideMenu.swift */,
+				490B198128B8447C00957F00 /* ImageSlider.swift */,
 			);
-			path = Navigation;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		49524D1628B6EC2F00A6D8F8 /* RiveAssets */ = {
@@ -212,12 +207,8 @@
 		496DCDCF28BA52090063ABF2 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				491C585C29AFA260005C1B30 /* Classes */,
-				496DCDD228BA53010063ABF2 /* CardView.swift */,
-				496DCDCD28BA513D0063ABF2 /* CardItem.swift */,
-				496DCDD028BA521B0063ABF2 /* CardExpand.swift */,
-				4993BE7B28E1F249006B7C40 /* AboutCardItem.swift */,
 				4958388F28E5C98000976B0B /* OnboardingView.swift */,
+				491C585C29AFA260005C1B30 /* Classes */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -246,15 +237,13 @@
 		49DEC5E328B459C4007CD8F6 /* TheApp */ = {
 			isa = PBXGroup;
 			children = (
-				49299918298205FF00C82BB8 /* Info.plist */,
 				49DEC5E428B459C4007CD8F6 /* TheAppApp.swift */,
+				49299918298205FF00C82BB8 /* Info.plist */,
 				49DEC60E28B459EF007CD8F6 /* Views */,
-				49524C7128B6EA1100A6D8F8 /* Navigation */,
-				490B198028B8446A00957F00 /* Components */,
 				495029A728B6E83700FDABBE /* Info */,
+				49524C7128B6EA1100A6D8F8 /* Components */,
 				495029A628B6E80A00FDABBE /* Styles */,
 				49524D1628B6EC2F00A6D8F8 /* RiveAssets */,
-				49DEC62728B45ED8007CD8F6 /* Fonts */,
 				49DEC5E828B459C5007CD8F6 /* Assets.xcassets */,
 				49DEC5EA28B459C5007CD8F6 /* Preview Content */,
 			);
@@ -290,12 +279,12 @@
 			isa = PBXGroup;
 			children = (
 				49DEC5E628B459C4007CD8F6 /* ContentView.swift */,
-				49F60A9329038A340095E413 /* Sign */,
+				495029AA28B6E87D00FDABBE /* HomeView.swift */,
 				49DEC62E28B6E7C7007CD8F6 /*  BigCardView.swift */,
 				49524D2928B7189E00A6D8F8 /* SmallCardView.swift */,
-				495029AA28B6E87D00FDABBE /* HomeView.swift */,
 				492EB24328BA492200198567 /* SundaySchoolView.swift */,
 				4985055E29AFC91000DD4FD2 /* HymnsView.swift */,
+				49F60A9329038A340095E413 /* Login */,
 				496DCDCF28BA52090063ABF2 /* SubViews */,
 			);
 			path = Views;
@@ -312,13 +301,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		49F60A9329038A340095E413 /* Sign */ = {
+		49F60A9329038A340095E413 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				495029AC28B6E88500FDABBE /* SignInView.swift */,
 				49F60A9429038A520095E413 /* SignupView.swift */,
 			);
-			path = Sign;
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,7 +477,6 @@
 				49524D2828B6FE9900A6D8F8 /* SideMenu.swift in Sources */,
 				49524C7028B6E96600A6D8F8 /* FontStyles.swift in Sources */,
 				492EB23F28B8FED200198567 /* SuperHomeView.swift in Sources */,
-				492EB24128B8FEDC00198567 /* SuperContentView.swift in Sources */,
 				4985055F29AFC91000DD4FD2 /* HymnsView.swift in Sources */,
 				49524C6E28B6E93400A6D8F8 /* Pre-made Extensions.swift in Sources */,
 				4958389028E5C98000976B0B /* OnboardingView.swift in Sources */,
