@@ -58,14 +58,19 @@ struct CardExpand: View {
                     print("pressed")
                 }
             }label: {
-                Image(systemName: "xmark")
-                    .font(.body.weight(.bold))
-                    .foregroundColor(.secondary)
-                    .padding(10)
-                    .background(.ultraThinMaterial, in: Circle())
+                HStack {
+                    Label("Back", systemImage: "arrowshape.turn.up.backward.fill")
+                        .font(.body.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal, 170)
+                        .padding(.vertical, 20)
+                        .background(.ultraThinMaterial)
+                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                }
                 
             }
-            .frame(maxWidth: .infinity, maxHeight: 770, alignment: .topTrailing)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .offset(y: 200)
             .padding(.trailing, 10)
 //            .ignoresSafeArea()
         }

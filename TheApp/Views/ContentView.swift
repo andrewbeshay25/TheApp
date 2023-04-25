@@ -36,6 +36,7 @@ struct ContentView: View {
             
             TabBar()
                 .offset(y: !Side ? -24 : 300)///////////////////////////////////////////////////////////////redo
+            ///
             
                 .background(
                     LinearGradient(colors: [Color("Background").opacity(0), Color("Background")], startPoint: .top, endPoint: .bottom)

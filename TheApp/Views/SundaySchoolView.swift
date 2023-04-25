@@ -13,7 +13,7 @@ struct SundaySchoolView: View {
     @State var show = false
     @State private var first_secondHymnsShow: Bool = false
     @State private var third_fourthHymnsShow: Bool = false
-
+    
     
     var body: some View {
         
@@ -41,10 +41,7 @@ struct SundaySchoolView: View {
                                         show.toggle()
                                     }
                                 }
-                            
-                            
                         }
-                        
                         HStack{
                             Button {
                                 first_secondHymnsShow.toggle()
@@ -64,7 +61,7 @@ struct SundaySchoolView: View {
                                     .frame(width: 100)
                                     .background(Color.accentColor.cornerRadius(30))
                             }
-
+                            
                         }
                     }
                     .fullScreenCover(isPresented: $first_secondHymnsShow){
@@ -111,7 +108,7 @@ struct SundaySchoolView: View {
                             .ignoresSafeArea()
                         }
                     }
-
+                    
                 }
             }
             

@@ -60,7 +60,7 @@ struct SuperHomeView: View {
                                         button.setInput("isOpen", value: isOpen)
                                         
                                         withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                            isOpen.toggle()
+                                            isOpen = true
                                         }
                                     }
                                     
@@ -72,6 +72,8 @@ struct SuperHomeView: View {
                                         withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                             isOpen = false
                                         }
+                                        isOpen = false
+
                                     }
                                 }
                             )
@@ -102,7 +104,9 @@ struct SuperHomeView: View {
                 //
                 
                 button.view() // offsets when something else is pressed on the screen.
-                    .frame(width: 44, height: 44) // A variable is toggled saying something else is pressed
+                              // A variable is toggled saying something else is pressed
+
+                    .frame(width: 44, height: 44)
                     .opacity(isShowingSomething ? 0 : 1)
                     .mask(Circle())
                     .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
@@ -115,7 +119,10 @@ struct SuperHomeView: View {
                             isOpen.toggle()
                         }
                     }
-                
+                if (isShowingSomething){
+                    button.view()
+                        .offset(x: -500)
+                }
             }
             
         }
