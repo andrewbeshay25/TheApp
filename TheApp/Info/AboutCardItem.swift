@@ -58,6 +58,6 @@ struct AboutCardItem_Previews: PreviewProvider {
     @Namespace static var namespace
 
     static var previews: some View {
-        AboutCardItem(namespace: namespace, show: .constant(true), item: primaries[1])
+        AboutCardItem(namespace: namespace, show: .constant(true), item: primaries[2])
     }
 }

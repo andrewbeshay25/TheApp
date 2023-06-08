@@ -10,6 +10,8 @@ import RiveRuntime
 
 struct SideMenu: View {
     @AppStorage("selectedMenu") var selectedMenu: SelectedMenu = .home
+    @Binding var isShowingSomething: Bool
+
     
     var body: some View {
         VStack(spacing: 0) {
@@ -19,6 +21,18 @@ struct SideMenu: View {
                     .padding(12)
                     .background(.white.opacity(0.2))
                     .mask(Circle())
+                
+                    .onDisappear(){
+                        withAnimation(.spring(response: 0.1, dampingFraction: 0.8)){
+                            isShowingSomething = true
+                        }
+                    }
+                    .onAppear(){
+                        withAnimation(.spring(response: 1, dampingFraction: 0.8)){
+                            isShowingSomething = false
+                        }
+                    }
+                
                 VStack(alignment: .leading, spacing: 2) {
                     
                     Button {
@@ -30,7 +44,7 @@ struct SideMenu: View {
                     Button {
                         //
                     } label: {
-                        Text("iOS Engineer")
+                        Text("Developer")
                             .font(.subheadline)
                             .opacity(0.7)
                     }
@@ -49,7 +63,7 @@ struct SideMenu: View {
             
             browse
             
-            Text("HISTORY")
+            Text("OPTIONS")
                 .font(.subheadline).bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 24)
@@ -59,27 +73,6 @@ struct SideMenu: View {
             history
             
             Spacer()
-            
-            //            HStack(spacing: 14) {
-            //                menuItems3[0].icon.view()
-            //                    .frame(width: 32, height: 32)
-            //                    .opacity(0.6)
-            //                    .onChange(of: darkModeToggeled) { newValue in
-            //                        if newValue {
-            //                            menuItems3[0].icon.setInput("active", value: true)
-            //                        } else {
-            //                            menuItems3[0].icon.setInput("active", value: false)
-            //                        }
-            //                    }
-            //                Text(menuItems3[0].text)
-            //
-            //                Toggle("", isOn: $darkModeToggeled)
-            //            }
-            //            .font(.headline)
-            //            .frame(maxWidth: .infinity, alignment: .leading)
-            //            .padding(12)
-            //            .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-            //            .padding(8)
         }
         
         .foregroundColor(.white)
@@ -174,7 +167,7 @@ struct SideMenu: View {
 
 struct SideMenu_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenu()
+        SideMenu(isShowingSomething: .constant(false))
     }
 }
 
@@ -187,18 +180,14 @@ struct MenuItem: Identifiable {
 
 var menuItems = [
     MenuItem(text: "Home", icon: RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME"), menu: .home),
-    MenuItem(text: "Favorites", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_Interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
-    MenuItem(text: "Help", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), menu: .help)
+    MenuItem(text: "Main Directory", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_Interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
+    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), menu: .notifications)
 ]
 
 var menuItems2 = [
-    MenuItem(text: "History", icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), menu: .history),
-    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
+    MenuItem(text: "Help & Support", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), menu: .help),
+//    MenuItem(text: "Contact Us", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
 ]
-
-//var menuItems3 = [
-//    MenuItem(text: "Dark Mode", icon: RiveViewModel(fileName: "icons", stateMachineName: "SETTINGS_Interactivity", artboardName: "SETTINGS"), menu: .darkmode)
-//]
 
 enum SelectedMenu: String {
     case home
@@ -207,5 +196,4 @@ enum SelectedMenu: String {
     case help
     case history
     case notifications
-    //    case darkmode
 }

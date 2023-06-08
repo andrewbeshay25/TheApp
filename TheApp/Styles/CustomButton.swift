@@ -34,7 +34,7 @@ struct LargeButton: ViewModifier {
             .foregroundColor(.white)
             .mask(RoundedCorner(radius: 20, corners: [.topRight, .bottomLeft, .bottomRight]))
             .mask(RoundedRectangle(cornerRadius: 8))
-            .shadow(color: Color("InverseAccentColor").opacity(0.5), radius: 20, x: 0, y: 10)
+            .shadow(color: Color("InverseAccentColor").opacity(0.2), radius: 20, x: 0, y: 10)
     }
 }
 
@@ -43,3 +43,4 @@ extension View {
         modifier(LargeButton())
     }
 }
+

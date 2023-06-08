@@ -23,13 +23,13 @@ struct ContentView: View {
             case .home:
                 SuperHomeView()
             case .timer:
-                Text("Schedules ig")
-            case .connect:
-                Text("CONNECT HUB System")
+                EventsCards()
+//            case .connect:
+//                Text("CONNECT HUB System")
             case .bell:
                 Text("Notifications")
             case .user:
-                Text("Profile")
+                ProfileView()
             }
             
             

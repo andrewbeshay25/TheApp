@@ -55,14 +55,14 @@ struct CardExpand: View {
             Button{
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)){
                     showing.toggle()
-                    print("pressed")
                 }
             }label: {
                 HStack {
                     Label("Back", systemImage: "arrowshape.turn.up.backward.fill")
+                        .foregroundColor(Color("Golden"))
                         .font(.body.weight(.bold))
                         .foregroundColor(.secondary)
-                        .padding(.horizontal, 170)
+                        .padding(.horizontal, 140)
                         .padding(.vertical, 20)
                         .background(.ultraThinMaterial)
                     .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))

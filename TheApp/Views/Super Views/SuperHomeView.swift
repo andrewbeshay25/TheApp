@@ -25,7 +25,7 @@ struct SuperHomeView: View {
             ZStack {
                 Color.accentColor.ignoresSafeArea()
                 
-                SideMenu()
+                SideMenu(isShowingSomething: $isShowingSomething)
                     .padding(.top, 50)
                     .opacity(isOpen ? 1 : 0)
                     .offset(x: isOpen ? 0 : -300)
@@ -36,15 +36,12 @@ struct SuperHomeView: View {
                     switch selectedMenu {
                         
                     case .home:
-                        
                         HomeView(isShowingSomething: $isShowingSomething)
-                        
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                     
                                     isOpen = false
                                     button.setInput("isOpen", value: !isOpen)
-                                    
                                 }
                             }
                             .gesture(DragGesture(minimumDistance: 5)
@@ -64,7 +61,6 @@ struct SuperHomeView: View {
                                         }
                                     }
                                     
-                                    
                                     // Close menu
                                     else {
                                         button.setInput("isOpen", value: !isOpen)
@@ -80,13 +76,14 @@ struct SuperHomeView: View {
                         
                         
                     case .favorites:
-                        Text("FAVORITESS")
+                        Text("Main Directory")
+                        
+                    case .notifications:
+                        Text("Noti")
                         
                     case .help:
                         Text("HELPPPP")
                         
-                    case .notifications:
-                        Text("Noti")
                     case .search:
                         Text("Search")
                     case .history:
@@ -105,9 +102,8 @@ struct SuperHomeView: View {
                 
                 button.view() // offsets when something else is pressed on the screen.
                               // A variable is toggled saying something else is pressed
-
+                    .offset(x: isShowingSomething ? -500 : 0)
                     .frame(width: 44, height: 44)
-                    .opacity(isShowingSomething ? 0 : 1)
                     .mask(Circle())
                     .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -119,12 +115,7 @@ struct SuperHomeView: View {
                             isOpen.toggle()
                         }
                     }
-                if (isShowingSomething){
-                    button.view()
-                        .offset(x: -500)
-                }
             }
-            
         }
     }
 }

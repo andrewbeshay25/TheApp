@@ -11,6 +11,8 @@ import RiveRuntime
 
 struct HomeView: View {
     @Binding var isShowingSomething: Bool
+    
+    
     //    var button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     var body: some View {
         NavigationView{
@@ -74,6 +76,7 @@ struct HomeView: View {
                                         VCard(service: services[0])
                                         
                                     }
+                                    
                                     .onDisappear(){
                                         withAnimation(.spring(response: 0.1, dampingFraction: 0.8)){
                                             isShowingSomething = true

@@ -82,14 +82,14 @@ var primaries = [
            subtitle: "Tap here to view locations, times, dates, and more regarding Sunday School Classes in the church.",
            caption: "Shallow information",
            details: "Details",
-           color: Color(hex: "7850F0"),
+           color: Color("Golden"),
            image: Image("Topic 1")),
     
     Primary(title: "Hymns Classes",
            subtitle: "Tap here to view information regarding hymns Classes, hymns competition classes, and private lessons opportunities in the church.",
            caption: "The caption goes here",
            details: "Details",
-           color: Color(hex: "6792FF"),
+           color: Color("Golden"),
            image: Image("Topic 1")),
     
     Primary(title: "Coptic Orthodox Sunday School",
