@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490216592A4F904B00E88CF9 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490216582A4F904B00E88CF9 /* Contents.swift */; };
 		4908A3BB2982D9390091404C /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 4908A3BA2982D9390091404C /* RiveRuntime */; };
 		490B198228B8447C00957F00 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B198128B8447C00957F00 /* ImageSlider.swift */; };
 		491258C12A1BB2E3001C9DE4 /* EventsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491258C02A1BB2E3001C9DE4 /* EventsCards.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490216582A4F904B00E88CF9 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		490B198128B8447C00957F00 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		491258C02A1BB2E3001C9DE4 /* EventsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCards.swift; sourceTree = "<group>"; };
 		491260BE2A30E1CD00100B6E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -302,15 +304,16 @@
 			isa = PBXGroup;
 			children = (
 				49DEC5E628B459C4007CD8F6 /* ContentView.swift */,
-				492EB24228B8FEE100198567 /* Super Views */,
 				495029AA28B6E87D00FDABBE /* HomeView.swift */,
 				492EB24328BA492200198567 /* SundaySchoolView.swift */,
-				4985055E29AFC91000DD4FD2 /* HymnsView.swift */,
 				495F431329F84D2500C364FD /* NewHymnsView.swift */,
+				4985055E29AFC91000DD4FD2 /* HymnsView.swift */,
+				492EB24228B8FEE100198567 /* Super Views */,
 				49F60A9329038A340095E413 /* Login */,
 				491258BF2A1BB2D2001C9DE4 /* Events */,
 				491260BD2A30E17A00100B6E /* Profile */,
 				496DCDCF28BA52090063ABF2 /* SubViews */,
+				490216582A4F904B00E88CF9 /* Contents.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				49524D2828B6FE9900A6D8F8 /* SideMenu.swift in Sources */,
 				49524C7028B6E96600A6D8F8 /* FontStyles.swift in Sources */,
 				492EB23F28B8FED200198567 /* SuperHomeView.swift in Sources */,
+				490216592A4F904B00E88CF9 /* Contents.swift in Sources */,
 				4985055F29AFC91000DD4FD2 /* HymnsView.swift in Sources */,
 				49524C6E28B6E93400A6D8F8 /* Pre-made Extensions.swift in Sources */,
 				4958389028E5C98000976B0B /* OnboardingView.swift in Sources */,

@@ -19,19 +19,18 @@ struct ContentView: View {
         ZStack{
             
             switch selctedTab {
-                
+               
             case .home:
                 SuperHomeView()
             case .timer:
                 EventsCards()
-//            case .connect:
+//            case .directory:
 //                Text("CONNECT HUB System")
             case .bell:
                 Text("Notifications")
             case .user:
                 ProfileView()
             }
-            
             
             
             TabBar()
@@ -55,6 +54,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
     }
 }

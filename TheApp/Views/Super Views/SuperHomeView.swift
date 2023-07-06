@@ -12,12 +12,13 @@ struct SuperHomeView: View {
     @State private var offset = CGFloat.zero
     @State private var closeOffset = CGFloat.zero
     @State private var openOffset = CGFloat.zero
-    @State var isShowingSomething: Bool = false
+
 
     @State var isOpen = false
     
     var button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     @AppStorage("selectedMenu") var selectedMenu: SelectedMenu = .home
+    
     
     var body: some View {
         
@@ -25,18 +26,19 @@ struct SuperHomeView: View {
             ZStack {
                 Color.accentColor.ignoresSafeArea()
                 
-                SideMenu(isShowingSomething: $isShowingSomething)
-                    .padding(.top, 50)
-                    .opacity(isOpen ? 1 : 0)
-                    .offset(x: isOpen ? 0 : -300)
-                    .rotation3DEffect(.degrees(isOpen ? 0 : 30), axis: (x: 0, y: 1, z: 0))
-                    .ignoresSafeArea(.all, edges: .top)
+//                SideMenu(isShowingSomething: $isShowingSomething)
+//                    .padding(.top, 50)
+//                    .opacity(isOpen ? 1 : 0)
+//                    .offset(x: isOpen ? 0 : -300)
+//                    .rotation3DEffect(.degrees(isOpen ? 0 : 30), axis: (x: 0, y: 1, z: 0))
+//                    .ignoresSafeArea(.all, edges: .top)
+                    
                 
                 Group{
                     switch selectedMenu {
                         
                     case .home:
-                        HomeView(isShowingSomething: $isShowingSomething)
+                        HomeView()
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                     
@@ -102,7 +104,6 @@ struct SuperHomeView: View {
                 
                 button.view() // offsets when something else is pressed on the screen.
                               // A variable is toggled saying something else is pressed
-                    .offset(x: isShowingSomething ? -500 : 0)
                     .frame(width: 44, height: 44)
                     .mask(Circle())
                     .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
@@ -113,8 +114,11 @@ struct SuperHomeView: View {
                         button.setInput("isOpen", value: isOpen)
                         withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                             isOpen.toggle()
+
+//
                         }
                     }
+                
             }
         }
     }

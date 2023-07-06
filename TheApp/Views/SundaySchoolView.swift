@@ -118,7 +118,7 @@ struct SundaySchoolView: View {
         }
         .background(Color.accentColor)
         .ignoresSafeArea()
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(false)
         
     }
 }

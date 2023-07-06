@@ -10,6 +10,7 @@ import SwiftUI
 struct EventsCards: View {
     
     @Environment(\.colorScheme) var colorScheme
+    @AppStorage ("selectedTab") var selctedTab: Tab = .timer
 
     var body: some View {
         
@@ -85,6 +86,17 @@ struct EventsCards: View {
                 }
                 .background(Color.accentColor)
                 .ignoresSafeArea()
+                
+                TabBar()
+                    .offset(y: -24)
+                    .background(
+                        LinearGradient(colors: [Color("Background").opacity(0), Color("Background")], startPoint: .top, endPoint: .bottom)
+                            .frame(height: 70)
+                            .frame(maxHeight: .infinity, alignment: .bottom)
+                            .allowsHitTesting(false)
+                    )
+                
+                    .ignoresSafeArea()
             }
             
         }

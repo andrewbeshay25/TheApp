@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ProfileView: View {
     let name = "Andrew Beshay"
-    let role = "Developer"
+    let role = "Head Developer"
     let phone = "551-273-8201"
     let email = "andrewbeshay2525@gmail.com"
     let address = "172 West 21st Street\nAPT 5\nBayonne, NJ 07002"
     
+    @AppStorage ("selectedTab") var selctedTab: Tab = .timer
+
     var body: some View {
         
         NavigationView{
@@ -69,6 +71,16 @@ struct ProfileView: View {
                 .offset(y: -119)
                 .offset(x: 180)
                 
+                TabBar()
+                    .offset(y: -24)
+                    .background(
+                        LinearGradient(colors: [Color("Background").opacity(0), Color("Background")], startPoint: .top, endPoint: .bottom)
+                            .frame(height: 70)
+                            .frame(maxHeight: .infinity, alignment: .bottom)
+                            .allowsHitTesting(false)
+                    )
+                
+                    .ignoresSafeArea()
             }
             .ignoresSafeArea()
         }

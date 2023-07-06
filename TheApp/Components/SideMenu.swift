@@ -10,77 +10,83 @@ import RiveRuntime
 
 struct SideMenu: View {
     @AppStorage("selectedMenu") var selectedMenu: SelectedMenu = .home
-    @Binding var isShowingSomething: Bool
-
+    @Binding var menuIsOpen: Bool
+    var isOpen = false
+    
+    var button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
+    
     
     var body: some View {
-        VStack(spacing: 0) {
+        ZStack {
             
-            HStack {
-                Image(systemName: "person")
-                    .padding(12)
-                    .background(.white.opacity(0.2))
-                    .mask(Circle())
+            VStack(spacing: 0) {
                 
-                    .onDisappear(){
-                        withAnimation(.spring(response: 0.1, dampingFraction: 0.8)){
-                            isShowingSomething = true
-                        }
-                    }
-                    .onAppear(){
-                        withAnimation(.spring(response: 1, dampingFraction: 0.8)){
-                            isShowingSomething = false
-                        }
-                    }
-                
-                VStack(alignment: .leading, spacing: 2) {
+                HStack {
+                    Image(systemName: "person")
+                        .padding(12)
+                        .background(.white.opacity(0.2))
+                        .mask(Circle())
                     
-                    Button {
-                        //
-                    } label: {
+                    
+                    
+                    VStack(alignment: .leading, spacing: 2) {
+                        
                         Text("Andrew Beshay")
-                    }
-                    
-                    Button {
-                        //
-                    } label: {
+                        
                         Text("Developer")
                             .font(.subheadline)
                             .opacity(0.7)
+                        
                     }
-                    
+                    Spacer()
                 }
+                .padding()
+                
+                Text("BROWSE")
+                    .font(.subheadline).bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 40)
+                    .opacity(0.7)
+                
+                browse
+                
+                Text("OPTIONS")
+                    .font(.subheadline).bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 40)
+                    .opacity(0.7)
+                
+                history
+                
                 Spacer()
             }
-            .padding()
             
-            Text("BROWSE")
-                .font(.subheadline).bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 24)
-                .padding(.top, 40)
-                .opacity(0.7)
+            .foregroundColor(.white)
+            .frame(maxWidth: 288, maxHeight: .infinity)
+            .background(Color.accentColor)
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .shadow(color: Color(hex: "17203A").opacity(0.3), radius: 40, x: 0, y: 20)
+            .frame(maxWidth: .infinity, alignment: .leading)
             
-            browse
+            button.view()
+                .frame(width: 44, height: 44)
+                .mask(Circle())
+                .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
+                .frame(maxWidth: 120, maxHeight: .infinity, alignment: .topTrailing)
+                .padding(.top)
             
-            Text("OPTIONS")
-                .font(.subheadline).bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 24)
-                .padding(.top, 40)
-                .opacity(0.7)
+                .onTapGesture {
+                    
+                    button.setInput("isOpen", value: false)
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                        menuIsOpen.toggle()
+                    }
+                }
             
-            history
             
-            Spacer()
         }
-        
-        .foregroundColor(.white)
-        .frame(maxWidth: 288, maxHeight: .infinity)
-        .background(Color.accentColor)
-        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .shadow(color: Color(hex: "17203A").opacity(0.3), radius: 40, x: 0, y: 20)
-        .frame(maxWidth: .infinity, alignment: .leading)
         
         
     }
@@ -167,7 +173,7 @@ struct SideMenu: View {
 
 struct SideMenu_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenu(isShowingSomething: .constant(false))
+        SideMenu(menuIsOpen: .constant(false))
     }
 }
 
@@ -186,7 +192,7 @@ var menuItems = [
 
 var menuItems2 = [
     MenuItem(text: "Help & Support", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), menu: .help),
-//    MenuItem(text: "Contact Us", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
+    //    MenuItem(text: "Contact Us", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
 ]
 
 enum SelectedMenu: String {
